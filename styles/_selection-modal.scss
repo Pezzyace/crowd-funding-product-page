@@ -1,0 +1,121 @@
+@import 'colors';
+@import 'media-quires';
+
+.selection-modal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: $Mblack;
+  top: 0;
+
+  section{
+    background-color: $crack;
+    padding: 20px;
+    position: relative;
+    width: 40%;
+    margin-top: 0px;
+    border-radius: 7px;
+
+    svg{
+      position: absolute;
+      right: 20px;
+    }
+
+    h2{
+      font-size: 15px;
+      margin: 15px 0;
+      font-weight: 700;
+    }
+    p{
+      color: $Dgray;
+      margin-bottom: 20px;
+    }
+
+    .no-pledge{
+      display: flex;
+      gap: 10px;
+      border: 1px solid $Mblack;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      align-items: flex-start;
+      padding: 20px 10px;
+
+      div{
+        flex-direction: column;
+        border: none;
+        gap: 10px;
+        padding: 0px;
+        margin-bottom: 0;
+
+        h2{
+          margin: 0 0 10px 0;
+          line-height: 1;
+        }
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .pledge-contain, .inactive{
+      border: 1px solid $Mblack;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      padding: 20px 10px;
+
+      div{
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        div{
+          display: flex;
+          flex-direction: column;
+          div{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            p{
+              color: $Black;
+              font-size: 13px;
+              font-weight: 700;
+              display: flex;
+              gap: 3px;
+              margin: 0;
+            }
+            div{
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+              
+              h2{
+                margin: 0;
+              }
+
+              h3{
+                color: $Mcyan;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+      .pledge{
+        display: none;
+        justify-content: space-between;
+    
+        div{
+          display: flex;
+        }
+      }
+    }
+      .inactive{
+        opacity: 0.4;
+      }
+  }
+  
+}

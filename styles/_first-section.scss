@@ -1,0 +1,25 @@
+@import 'colors';
+@import 'media-quires';
+
+.first{
+  background: url(/images/image-hero-desktop.jpg) no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 150px;
+
+    ul{
+      display: flex;
+      gap: 30px;
+
+      li{
+        color: $crack;
+      }
+    }
+  }
+}

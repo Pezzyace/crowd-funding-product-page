@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'media-quires';
+
+.third{
+  background-color: $crack;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+
+  div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .two{
+      border-right: 1px solid $Dgray;
+      border-left: 1px solid $Dgray;
+    }
+
+    div{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      p{
+        margin-left: 50px;
+      }
+      :nth-child(1){
+        color: black;
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+    }
+  }
+}

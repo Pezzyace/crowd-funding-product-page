@@ -1,6 +1,350 @@
+.first {
+  background: url(/images/image-hero-desktop.jpg) no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+.first nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+}
+.first nav ul {
+  display: flex;
+  gap: 30px;
+}
+.first nav ul li {
+  color: hsl(0, 0%, 100%);
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  margin: 0 auto;
+  margin-top: -70px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  position: relative;
+}
+.second .logo {
+  margin: -30px 0 25px 0;
+}
+.second h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.second p {
+  margin-bottom: 40px;
+}
+.second .button-container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  margin-bottom: 30px;
+}
+.second .button-container1 button {
+  padding: 14px 25px;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+}
+.second .button-container1 div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.second .button-container1 div img {
+  margin-left: 10px;
+  width: 45px;
+  position: absolute;
+  left: -40px;
+}
+.second .button-container1 div button {
+  padding: 14px 23px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  font-weight: 700;
+  color: hsl(0, 0%, 48%);
+  background-color: rgb(214, 214, 214);
+}
+
+.third {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.third div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.third div .two {
+  border-right: 1px solid hsl(0, 0%, 48%);
+  border-left: 1px solid hsl(0, 0%, 48%);
+}
+.third div div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.third div div p {
+  margin-left: 50px;
+}
+.third div div :nth-child(1) {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.fourth {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 7px;
+}
+.fourth .inactive {
+  opacity: 0.4;
+}
+.fourth h2 {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+.fourth p {
+  margin-bottom: 20px;
+  line-height: 2;
+  font-size: 14px;
+  color: hsl(0, 0%, 48%);
+  font-weight: 500;
+}
+.fourth :nth-child(3) {
+  margin-bottom: 30px;
+}
+.fourth .body {
+  border: 1px solid hsl(0, 0%, 48%);
+  border-radius: 7px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.fourth .body .head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.fourth .body .head h3 {
+  font-size: 15px;
+}
+.fourth .body .head p {
+  line-height: normal;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+.fourth .body .amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+.fourth .body .amount p {
+  font-size: 23px;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+  line-height: normal;
+  margin-bottom: 0;
+}
+.fourth .body .amount p span {
+  font-size: 15px;
+  color: hsl(0, 0%, 48%);
+  font-weight: 400;
+}
+.fourth .body .amount button {
+  padding: 14px 25px;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+}
+
+.success-modal section, .success-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-modal {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+}
+.success-modal section {
+  background-color: hsl(0, 0%, 100%);
+  width: 30%;
+  padding: 30px;
+  border-radius: 7px;
+}
+.success-modal section img {
+  margin-bottom: 20px;
+}
+.success-modal section h3 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.success-modal section p {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 2;
+  font-size: 14px;
+  color: hsl(0, 0%, 48%);
+}
+.success-modal section button {
+  padding: 14px 25px;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+}
+
+.selection-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+}
+.selection-modal section {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  position: relative;
+  width: 40%;
+  margin-top: 0px;
+  border-radius: 7px;
+}
+.selection-modal section svg {
+  position: absolute;
+  right: 20px;
+}
+.selection-modal section h2 {
+  font-size: 15px;
+  margin: 15px 0;
+  font-weight: 700;
+}
+.selection-modal section p {
+  color: hsl(0, 0%, 48%);
+  margin-bottom: 20px;
+}
+.selection-modal section .no-pledge {
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  align-items: flex-start;
+  padding: 20px 10px;
+}
+.selection-modal section .no-pledge div {
+  flex-direction: column;
+  border: none;
+  gap: 10px;
+  padding: 0px;
+  margin-bottom: 0;
+}
+.selection-modal section .no-pledge div h2 {
+  margin: 0 0 10px 0;
+  line-height: 1;
+}
+.selection-modal section .no-pledge div p {
+  margin-bottom: 0;
+}
+.selection-modal section .pledge-contain, .selection-modal section .inactive {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+.selection-modal section .pledge-contain div, .selection-modal section .inactive div {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.selection-modal section .pledge-contain div div, .selection-modal section .inactive div div {
+  display: flex;
+  flex-direction: column;
+}
+.selection-modal section .pledge-contain div div div, .selection-modal section .inactive div div div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.selection-modal section .pledge-contain div div div p, .selection-modal section .inactive div div div p {
+  color: hsl(0, 0%, 0%);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  gap: 3px;
+  margin: 0;
+}
+.selection-modal section .pledge-contain div div div div, .selection-modal section .inactive div div div div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.selection-modal section .pledge-contain div div div div h2, .selection-modal section .inactive div div div div h2 {
+  margin: 0;
+}
+.selection-modal section .pledge-contain div div div div h3, .selection-modal section .inactive div div div div h3 {
+  color: hsl(176, 50%, 47%);
+  font-size: 13px;
+}
+.selection-modal section .pledge-contain .pledge, .selection-modal section .inactive .pledge {
+  display: none;
+  justify-content: space-between;
+}
+.selection-modal section .pledge-contain .pledge div, .selection-modal section .inactive .pledge div {
+  display: flex;
+}
+.selection-modal section .inactive {
+  opacity: 0.4;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  font-family: "Commissioner", sans-serif;
+}
+
+body {
+  background-color: rgb(244, 244, 244);
+  position: relaive;
 }/*# sourceMappingURL=styles.css.map */
