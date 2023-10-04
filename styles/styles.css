@@ -143,11 +143,15 @@
   border: none;
   font-size: 12px;
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 @media screen and (max-width: 375px) {
   .second .button-container1 button {
     width: 80%;
   }
+}
+.second .button-container1 button:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 .second .button-container1 div {
   display: flex;
@@ -159,6 +163,7 @@
   width: 45px;
   position: absolute;
   left: -40px;
+  cursor: pointer;
 }
 @media screen and (max-width: 375px) {
   .second .button-container1 div img {
@@ -350,6 +355,10 @@
   border: none;
   font-size: 12px;
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+.fourth .body .amount button:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 
 .success-modal section, .success-modal {
@@ -373,6 +382,11 @@
   padding: 30px;
   border-radius: 7px;
 }
+@media screen and (max-width: 375px) {
+  .success-modal section {
+    width: 90%;
+  }
+}
 .success-modal section img {
   margin-bottom: 20px;
 }
@@ -395,9 +409,12 @@
   font-size: 12px;
   color: hsl(0, 0%, 100%);
 }
+.success-modal section button:hover {
+  background-color: hsl(176, 72%, 28%);
+}
 
 .selection-modal {
-  display: noe;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -415,6 +432,15 @@
   margin-top: 0px;
   border-radius: 7px;
 }
+.selection-modal section div .select {
+  border: 1px solid hsl(176, 72%, 28%);
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .selection-modal section svg {
   position: absolute;
   right: 20px;
@@ -424,9 +450,19 @@
   margin: 15px 0;
   font-weight: 700;
 }
+@media screen and (max-width: 375px) {
+  .selection-modal section h2 {
+    font-size: 13px;
+  }
+}
 .selection-modal section p {
   color: hsl(0, 0%, 48%);
   margin-bottom: 20px;
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section p {
+    font-size: 11px;
+  }
 }
 .selection-modal section .no-pledge {
   display: flex;
@@ -447,6 +483,10 @@
 .selection-modal section .no-pledge div h2 {
   margin: 0 0 10px 0;
   line-height: 1;
+}
+.selection-modal section .no-pledge div h2:hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
 }
 .selection-modal section .no-pledge div p {
   margin-bottom: 0;
@@ -472,6 +512,20 @@
 .selection-modal section .pledge-contain div div p, .selection-modal section .inactive div div p {
   margin: 0;
 }
+.selection-modal section .pledge-contain div div .reminder, .selection-modal section .inactive div div .reminder {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain div div .reminder, .selection-modal section .inactive div div .reminder {
+    display: inline-block;
+    color: hsl(0, 0%, 0%);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    gap: 3px;
+    margin: 0;
+  }
+}
 .selection-modal section .pledge-contain div div div, .selection-modal section .inactive div div div {
   display: flex;
   flex-direction: row;
@@ -486,21 +540,46 @@
   gap: 3px;
   margin: 0;
 }
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain div div div p, .selection-modal section .inactive div div div p {
+    display: none;
+  }
+}
 .selection-modal section .pledge-contain div div div div, .selection-modal section .inactive div div div div {
   display: flex;
   flex-direction: row;
   width: 100%;
   padding: 0;
 }
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain div div div div, .selection-modal section .inactive div div div div {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .selection-modal section .pledge-contain div div div div h2, .selection-modal section .inactive div div div div h2 {
   margin: 0;
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain div div div div h2, .selection-modal section .inactive div div div div h2 {
+    padding-bottom: 3px;
+  }
+}
+.selection-modal section .pledge-contain div div div div h2:hover, .selection-modal section .inactive div div div div h2:hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
 }
 .selection-modal section .pledge-contain div div div div h3, .selection-modal section .inactive div div div div h3 {
   color: hsl(176, 50%, 47%);
   font-size: 13px;
 }
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain div div div div h3, .selection-modal section .inactive div div div div h3 {
+    font-size: 11px;
+  }
+}
 .selection-modal section .pledge-contain .pledge, .selection-modal section .inactive .pledge {
-  display: flex;
+  display: none;
   border-top: 1px solid hsl(0, 0%, 48%);
   width: 100%;
   padding: 10px;
@@ -508,9 +587,20 @@
   gap: 0;
   justify-content: space-between;
 }
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain .pledge, .selection-modal section .inactive .pledge {
+    padding: 15px;
+  }
+}
 .selection-modal section .pledge-contain .pledge p, .selection-modal section .inactive .pledge p {
   margin: 0;
   width: 100%;
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain .pledge p, .selection-modal section .inactive .pledge p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 .selection-modal section .pledge-contain .pledge div, .selection-modal section .inactive .pledge div {
   display: flex;
@@ -519,6 +609,11 @@
   align-items: center;
   border: none;
   border-radius: 30px;
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain .pledge div, .selection-modal section .inactive .pledge div {
+    justify-content: center;
+  }
 }
 .selection-modal section .pledge-contain .pledge div .input-btn, .selection-modal section .inactive .pledge div .input-btn {
   display: flex;
@@ -541,6 +636,9 @@
   font-size: 15px;
   font-weight: 700;
 }
+.selection-modal section .pledge-contain .pledge div .input-btn:focus, .selection-modal section .inactive .pledge div .input-btn:focus {
+  border-color: 2px solid hsl(176, 72%, 28%);
+}
 .selection-modal section .pledge-contain .pledge div .continue-btn, .selection-modal section .inactive .pledge div .continue-btn {
   padding: 14px 25px;
   background-color: hsl(176, 50%, 47%);
@@ -548,6 +646,14 @@
   border: none;
   font-size: 12px;
   color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 375px) {
+  .selection-modal section .pledge-contain .pledge div .continue-btn, .selection-modal section .inactive .pledge div .continue-btn {
+    width: 50%;
+  }
+}
+.selection-modal section .pledge-contain .pledge div .continue-btn:hover, .selection-modal section .inactive .pledge div .continue-btn:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 .selection-modal section .inactive {
   opacity: 0.4;

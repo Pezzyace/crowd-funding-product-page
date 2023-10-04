@@ -35,7 +35,7 @@
       <h1>Mastercraft Bamboo Monitor Riser</h1>
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="button-container1">
-        <button>Back this project</button>
+        <button id="selectReward-btn">Back this project</button>
         <div>
           <img src="/images/icon-bookmark.svg" alt="" class="bookmark">
           <button>Bookmark</button>
@@ -71,7 +71,7 @@
         <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
         <div class="amount">
           <p>101 <span>left</span></p>
-          <button>Select Reward</button>
+          <button id="selectReward-btn">Select Reward</button>
         </div>
       </div>
       <div class="body">
@@ -82,7 +82,7 @@
         <p> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
         <div class="amount">
           <p>64 <span>left</span></p>
-          <button>Select Reward</button>
+          <button id="selectReward-btn">Select Reward</button>
         </div>
       </div>
       <div class="body inactive">
@@ -93,26 +93,28 @@
         <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
         <div class="amount">
           <p>0 <span>left</span></p>
-          <button>Out of Stock</button>
+          <button disabled>Out of Stock</button>
         </div>
       </div>
     </section>
   </main>
-  <section class="selection-modal">
+  <section class="selection-modal" id="selectionModal">
     <section>
-      <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#7a7a7a" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
+      <div id="closeSelectionModalBtn">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#7a7a7a" fill-rule="evenodd"><path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z"/><path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z"/></g></svg>
+      </div>
       <h2>Back this project</h2>
       <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
       <div class="no-pledge">
-        <input type="radio" name="" id="">
+        <input type="radio" name="selected" id="">
         <div>
           <h2>Pledge with no reward</h2>
           <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
         </div>
       </div>
-      <div class="pledge-contain">
+      <div class="pledge-contain" id="pledgeContainer">
         <div>
-          <input type="radio" name="" id="">
+          <input type="radio" name="selected" id="radio">
           <div>
             <div>
               <div>
@@ -122,9 +124,11 @@
               <p>101 <span>left</span></p>
             </div>
             <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
+
+            <p class="reminder">101 <span>left</span></p>
           </div>
         </div>
-        <article class="pledge">
+        <article class="pledge" id="article">
           <p>Enter your pledge</p>
           <div>
             <button class="input-btn">$ <input type="text"> </button>
@@ -134,7 +138,7 @@
       </div>
       <div class="pledge-contain">
         <div>
-          <input type="radio" name="" id="">
+          <input type="radio" name="selected" id="radio">
           <div>
             <div>
               <div>
@@ -144,15 +148,16 @@
               <p>64 <span>left</span></p>
             </div>
             <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+            <p class="reminder">64 <span>left</span></p>
           </div>
         </div>
-        <div class="pledge">
+        <article class="pledge" id="articlev">
           <p>Enter your pledge</p>
           <div>
             <button class="input-btn">$ <input type="text"> </button>
-            <button class="continue-btn">Continue</button>
+            <button class="continue-btn" id="continueBtn">Continue</button>
           </div>
-        </div>
+        </article>
       </div>
       <div class="inactive">
         <div>
@@ -166,6 +171,7 @@
               <p>0 <span>left</span></p>
             </div>
             <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+            <p class="reminder">0 <span>left</span></p>
           </div>
         </div>
         <div class="pledge">

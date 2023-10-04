@@ -2,7 +2,7 @@
 @import 'media-quires';
 
 .selection-modal{
-  display: noe;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -12,10 +12,6 @@
   background-color: $Mblack;
   top: 0;
 
-  @include mobile{
-    
-  }
-
   section{
     background-color: $crack;
     padding: 20px;
@@ -23,6 +19,17 @@
     width: 40%;
     margin-top: 0px;
     border-radius: 7px;
+
+    div{
+        .select{
+          border: 1px solid $Dcyan;
+        }
+    }
+
+    @include mobile{
+      width: 90%;
+      margin: 0 auto;
+    }
 
     svg{
       position: absolute;
@@ -33,10 +40,18 @@
       font-size: 15px;
       margin: 15px 0;
       font-weight: 700;
+
+      @include mobile{
+        font-size: 13px;  
+      } 
     }
     p{
       color: $Dgray;
       margin-bottom: 20px;
+
+      @include mobile{
+        font-size: 11px;
+      }
     }
 
     .no-pledge{
@@ -58,6 +73,10 @@
         h2{
           margin: 0 0 10px 0;
           line-height: 1;
+        }
+        h2:hover{
+          color: $Mcyan;
+          cursor: pointer;
         }
         p{
           margin-bottom: 0;
@@ -86,6 +105,21 @@
           p{
             margin: 0;
           }
+
+          .reminder{
+            display: none;
+
+            @include mobile{
+              display: inline-block;
+              color: $Black;
+              font-size: 13px;
+              font-weight: 700;
+              display: flex;
+              gap: 3px;
+              margin: 0;
+
+            }
+          }
           div{
             display: flex;
             flex-direction: row;
@@ -99,37 +133,69 @@
               display: flex;
               gap: 3px;
               margin: 0;
+
+              @include mobile{
+                display: none;
+              }
             }
             div{
               display: flex;
               flex-direction: row;
               width: 100%;
               padding: 0;
+
+              @include mobile{
+                flex-direction: column;
+                gap: 0;
+              }
               
               h2{
                 margin: 0;
+
+                @include mobile{
+                  padding-bottom: 3px;
+                }
+              }
+              h2:hover{
+                color: $Mcyan;
+                cursor: pointer;
               }
 
               h3{
                 color: $Mcyan;
                 font-size: 13px;
+
+                @include mobile{
+                  font-size: 11px;
+                }
               }
             }
           }
         }
       }
       .pledge{
-        display: flex;
+        display: none;
         border-top: 1px solid $Dgray;
         width: 100%;
         padding: 10px;
         align-items: center;
         gap: 0;
         justify-content: space-between;
+
+        
+
+        @include mobile{
+          padding: 15px; 
+        }
         
         p{
           margin: 0;
           width: 100%;
+
+          @include mobile{
+            text-align: center;
+            margin-bottom: 10px;
+          }
         }
     
         div{
@@ -139,6 +205,10 @@
           align-items: center;
           border: none;
           border-radius: 30px;
+
+          @include mobile{
+            justify-content: center;
+          }
 
           .input-btn{
             display: flex;
@@ -163,6 +233,9 @@
               font-weight: 700;
             }
           }
+          .input-btn:focus{
+            border-color: 2px solid $Dcyan;
+          }
 
           .continue-btn{
             padding: 14px 25px;
@@ -171,6 +244,13 @@
             border: none;
             font-size: 12px;
             color: $crack;
+
+            @include mobile{
+              width: 50%;
+            }
+          }
+          .continue-btn:hover{
+            background-color: $Dcyan;
           }
         }
       }
