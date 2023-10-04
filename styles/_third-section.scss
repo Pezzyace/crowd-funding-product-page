@@ -11,13 +11,27 @@
   border-radius: 7px;
   margin-bottom: 20px;
 
+  @include mobile{
+   width: 90%;   
+  }
+
   div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
+    @include mobile{
+      grid-template-columns: 1fr; 
+    }
+
     .two{
       border-right: 1px solid $Dgray;
       border-left: 1px solid $Dgray;
+
+      @include mobile{
+        border: none;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     div{
@@ -25,14 +39,27 @@
       flex-direction: column;
       margin-bottom: 30px;
 
+      @include mobile{
+        justify-content: center;
+        align-items: center;
+      }
+
       p{
         margin-left: 50px;
+
+        @include mobile{
+          margin: 0;
+        }
       }
       :nth-child(1){
         color: black;
         font-size: 20px;
         margin-bottom: 5px;
         font-weight: 700;
+
+        @include mobile{
+          font-size: 25px;
+        }
       }
     }
   }

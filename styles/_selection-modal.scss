@@ -2,7 +2,7 @@
 @import 'media-quires';
 
 .selection-modal{
-  display: none;
+  display: noe;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -11,6 +11,10 @@
   width: 100vw;
   background-color: $Mblack;
   top: 0;
+
+  @include mobile{
+    
+  }
 
   section{
     background-color: $crack;
