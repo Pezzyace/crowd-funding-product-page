@@ -45,7 +45,7 @@
     <section class="third">
       <div>
         <div class="one">
-          <p>$89,914</p>
+          <p id="pledgeAmount">$89,914</p>
           <p>of $100,000 backed</p>
         </div>
         <div class="two">
@@ -57,7 +57,9 @@
           <p>days left</p>
         </div>
       </div>
-      <input type="range" name="range" id="range">
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
     </section>
     <section class="fourth">
       <h2>About this project</h2>
@@ -112,9 +114,9 @@
           <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
         </div>
       </div>
-      <div class="pledge-contain" id="pledgeContainer">
+      <div class="pledge-contain">
         <div>
-          <input type="radio" name="selected" id="radio">
+          <input type="radio" name="selected" value="bambooOption" id="radio" onchange="showInfo()">
           <div>
             <div>
               <div>
@@ -124,11 +126,10 @@
               <p>101 <span>left</span></p>
             </div>
             <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
-
             <p class="reminder">101 <span>left</span></p>
           </div>
         </div>
-        <article class="pledge" id="article">
+        <article class="pledge" id="bambooOptionInfo">
           <p>Enter your pledge</p>
           <div>
             <button class="input-btn">$ <input type="text"> </button>
@@ -138,7 +139,7 @@
       </div>
       <div class="pledge-contain">
         <div>
-          <input type="radio" name="selected" id="radio">
+          <input type="radio" name="selected" value="blackOption" id="radio" onchange="showInfo()">
           <div>
             <div>
               <div>
@@ -151,7 +152,7 @@
             <p class="reminder">64 <span>left</span></p>
           </div>
         </div>
-        <article class="pledge" id="articlev">
+        <article class="pledge" id="blackOptionInfo">
           <p>Enter your pledge</p>
           <div>
             <button class="input-btn">$ <input type="text"> </button>

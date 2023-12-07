@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radio Button Info Display</title>
+  <style>
+    /* Hide the content initially */
+    .info {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<p>Select an option:</p>
+
+<label>
+  <input type="radio" name="options" value="option1" onchange="showInfo()"> Option 1
+</label>
+<div class="info" id="option1Info">
+  <h3>Information about Option 1</h3>
+  <p>This is information related to Option 1.</p>
+</div>
+<br>
+<label>
+  <input type="radio" name="options" value="option2" onchange="showInfo()"> Option 2
+</label>
+
+<div class="info" id="option2Info">
+  <h3>Information about Option 2</h3>
+  <p>This is information related to Option 2.</p>
+</div>
+<br>
+<label>
+  <input type="radio" name="options" value="option3" onchange="showInfo()"> Option 3
+</label>
+<div class="info" id="option3Info">
+  <h3>Information about Option 3</h3>
+  <p>This is information related to Option 3.</p>
+</div>
+
+<script>
+function showInfo() {
+  const option1Info = document.getElementById('option1Info');
+  const option2Info = document.getElementById('option2Info');
+  const option3Info = document.getElementById('option3Info');
+
+  // Hide all info sections initially
+  option1Info.style.display = 'none';
+  option2Info.style.display = 'none';
+  option3Info.style.display = 'none';
+
+  // Get the selected option value
+  const selectedOption = document.querySelector('input[name="options"]:checked').value;
+
+  // Display the selected option's info
+  if (selectedOption === 'option1') {
+    option1Info.style.display = 'block';
+  } else if (selectedOption === 'option2') {
+    option2Info.style.display = 'block';
+  } else if (selectedOption === 'option3') {
+    option3Info.style.display = 'block';
+  }
+}
+</script>
+
+</body>
+</html>

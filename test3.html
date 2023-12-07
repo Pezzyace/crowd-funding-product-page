@@ -1,0 +1,149 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pledge Progress Bar</title>
+  <style>
+    /* Style for the progress bar */
+    .progress {
+      width: 100%;
+      height: 30px;
+      border: 1px solid #ccc;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      background-color: #3498db;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<p>Maximum Amount: $5000</p>
+<p>Default Amount Pledged: $1000</p>
+<p>Total People Pledged: <span id="pledgeCount">3</span></p>
+
+<label for="pledgeAmount">Enter Pledge Amount:</label>
+<input type="number" id="pledgeAmount" min="1" max="5000">
+<button onclick="makePledge()">Make Pledge</button>
+
+<script>
+let totalPledged = 1000; // Default amount already pledged
+let pledgeCount = 0; // Counter for the number of people pledged
+const maxAmount = 5000; // Maximum amount that can be pledged
+
+// Initial display of total pledged and people pledged
+document.getElementById('progressBar').style.width = (totalPledged / maxAmount) * 100 + '%';
+document.getElementById('pledgeCount').textContent = pledgeCount;
+
+function makePledge() {
+  const inputField = document.getElementById('pledgeAmount');
+  const progressBar = document.getElementById('progressBar');
+  const pledgeCountElement = document.getElementById('pledgeCount');
+
+  const pledgeAmount = parseInt(inputField.value);
+  
+  // Check if the pledge amount is within the allowed range and the maximum limit is not reached
+  if (pledgeAmount > 0 && totalPledged + pledgeAmount <= maxAmount) {
+    totalPledged += pledgeAmount;
+    pledgeCount++;
+    const percentage = (totalPledged / maxAmount) * 100;
+    progressBar.style.width = percentage + '%';
+    pledgeCountElement.textContent = pledgeCount;
+  }
+
+  // Reset the input field value
+  inputField.value = '';
+}
+</script>
+
+</body>
+</html>
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pledge Progress Bar</title>
+  <style>
+    /* Style for the progress bar */
+    .progress {
+      width: 100%;
+      height: 30px;
+      border: 1px solid #ccc;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      background-color: #3498db;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<p>Maximum Amount: $5000</p>
+<p>Default Amount Pledged: $1000</p>
+<p>Total People Pledged: <span id="pledgeCount">0</span></p>
+
+<label for="pledgeAmount">Enter Pledge Amount:</label>
+<input type="number" id="pledgeAmount" min="1" max="5000">
+<button onclick="makePledge()">Make Pledge</button>
+
+<script>
+let totalPledged = 1000; // Default amount already pledged
+let pledgeCount = 3; // Counter for the number of people pledged
+const maxAmount = 5000; // Maximum amount that can be pledged
+
+// Initial display of total pledged and people pledged
+updateProgress();
+
+function makePledge() {
+  const inputField = document.getElementById('pledgeAmount');
+
+  const pledgeAmount = parseInt(inputField.value);
+  
+  // Calculate the remaining amount that can be pledged
+  const remainingAmount = maxAmount - totalPledged;
+
+  // Check if the pledge amount is within the allowed range and the maximum limit is not reached
+  if (pledgeAmount > 0 && remainingAmount >= pledgeAmount) {
+    totalPledged += pledgeAmount;
+    pledgeCount++;
+    updateProgress();
+  }
+
+  // Reset the input field value
+  inputField.value = '';
+}
+
+function updateProgress() {
+  const progressBar = document.getElementById('progressBar');
+  const pledgeCountElement = document.getElementById('pledgeCount');
+  
+  const percentage = (totalPledged / maxAmount) * 100;
+  progressBar.style.width = percentage + '%';
+  pledgeCountElement.textContent = pledgeCount;
+}
+</script>
+
+</body>
+</html>
